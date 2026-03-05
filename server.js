@@ -9,10 +9,7 @@ app.use(express.static('.'));
 app.use(express.static('public'));
 
 app.get('/api/info', (req, res) => {
-    res.status(200).json({
-        mission: "all rights reserved",
-
-    });
+    res.status(200).json({});
 });
 
 app.listen(PORT, '0.0.0.0', () => {
