@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS App</title>
+    <style>
+        /* center-align everything inside the body */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        /* optional spacing for headings/buttons */
+        h1, h2 {
+            margin: 0.5rem 0;
+        }
+
+        button {
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to HolaLearn, SaaS app for language learning</h1>
+    <img src="learning-spanish-for-travel.jpg" alt="Learning Spanish for Travel" style="max-width:100%;height:auto;margin-top:1rem;">
+    <h2>(1) please login:</h1>
+    <button onclick="window.location.href='https://tidy-mutt-90.accounts.dev/sign-in'">Login</button>
+
+    <h2>Our Service is only awailable as a paid subscription. To subscribe, please click the button below.</h1>
+    <button onclick="window.location.href='https://buy.stripe.com/test_8x2cN77KH6GnfdG81X8so00'">Pay and subscribe</button>
+    <div id="info">
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        fetch('/api/info')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('info').innerHTML = `
+                    <p>Mission: ${data.mission}</p>
+                    <p>Team: ${data.meeskond}</p>
+                    <p>Date: ${data.eeg}</p>
+                `;
+            })
+            .catch(error => {
+                document.getElementById('info').innerHTML = '<p>rights reserved 2026</p>';
+            });
+    </script>
+</body>
+</html>

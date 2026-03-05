@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 3000;
 
 const NIMI = process.env.MY_NAME || 'Tundmatu nimi';
 
+app.use(express.static('.'));
+
 app.get('/api/info', (req, res) => {
     res.status(200).json({
         mission: "Iseseisev deploimine edukas",
