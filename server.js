@@ -10,10 +10,7 @@ app.use(express.static('public'));
 
 app.get('/api/info', (req, res) => {
     res.status(200).json({
-        mission: "Iseseisev deploimine edukas",
-
-        meeskond: NIMI,
-        eeg: new Date().toISOString()
+        mission: "all rights reserved",
 
     });
 });
