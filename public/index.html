@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaS App</title>
+    <title>HolaLearn - Language Learning Made Easy</title>
     <style>
-        /* center-align everything inside the body */
+        /* Global reset and body styling */
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,28 +16,79 @@
             min-height: 100vh;
             margin: 0;
             padding: 2rem;
-            box-sizing: border-box;
+            background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+            color: #1f2937;
         }
 
-        /* optional spacing for headings/buttons */
-        h1, h2 {
-            margin: 0.5rem 0;
+        h1 {
+            font-size: 2.2rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 1rem 0 0.5rem;
+            font-weight: normal;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
         }
 
         button {
             margin: 0.5rem 0;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .login-btn {
+            background-color: #4f46e5;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #4338ca;
+        }
+
+        .subscribe-btn {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #059669;
+        }
+
+        p {
+            max-width: 500px;
+            margin: 0.5rem auto 1rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to HolaLearn, SaaS app for language learning</h1>
-    <img src="learning-spanish-for-travel.jpg" alt="Learning Spanish for Travel" style="max-width:100%;height:auto;margin-top:1rem;">
-    <h2>(1) please login:</h1>
-    <button onclick="window.location.href='https://tidy-mutt-90.accounts.dev/sign-in'">Login</button>
+    <h1>Welcome to HolaLearn</h1>
+    <p>Your personal SaaS app for learning languages quickly and effectively!</p>
 
-    <h2>Our Service is only awailable as a paid subscription. To subscribe, please click the button below.</h1>
-    <button onclick="window.location.href='https://buy.stripe.com/test_8x2cN77KH6GnfdG81X8so00'">Pay and subscribe</button>
+    <img src="learning-spanish-for-travel.jpg" alt="Learning Spanish for Travel">
 
+    <h2>Login to Your Account</h2>
+    <button class="login-btn" onclick="window.location.href='https://tidy-mutt-90.accounts.dev/sign-in'">
+        Login
+    </button>
+
+    <h2>Subscribe to Unlock Full Access</h2>
+    <p>HolaLearn is available as a premium subscription. Click below to start your journey!</p>
+    <button class="subscribe-btn" onclick="window.location.href='https://buy.stripe.com/test_8x2cN77KH6GnfdG81X8so00'">
+        Subscribe & Pay
+    </button>
 </body>
 </html>
