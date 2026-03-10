@@ -37,23 +37,6 @@
 
     <h2>Our Service is only awailable as a paid subscription. To subscribe, please click the button below.</h1>
     <button onclick="window.location.href='https://buy.stripe.com/test_8x2cN77KH6GnfdG81X8so00'">Pay and subscribe</button>
-    <div id="info">
-        <p>Loading...</p>
-    </div>
 
-    <script>
-        fetch('/api/info')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('info').innerHTML = `
-                    <p>Mission: ${data.mission}</p>
-                    <p>Team: ${data.meeskond}</p>
-                    <p>Date: ${data.eeg}</p>
-                `;
-            })
-            .catch(error => {
-                document.getElementById('info').innerHTML = '<p>rights reserved 2026</p>';
-            });
-    </script>
 </body>
 </html>
